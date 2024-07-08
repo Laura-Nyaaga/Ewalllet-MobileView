@@ -19,12 +19,12 @@ class EwalletAdapter (var salaryList: List<SalaryExpenditure>): RecyclerView.Ada
     override fun onBindViewHolder(holder: SalaryViewHolder, position: Int) {
         val salaryExpenditure = salaryList[position]
         holder.salary.text = salaryExpenditure.descrption
-        holder.moneyA.text = salaryExpenditure.money
-        holder.date.text = salaryExpenditure.datetime
+        holder.amount.text = salaryExpenditure.money
+        holder.tvdate.text = salaryExpenditure.date
     }
 }
 class  SalaryViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     var salary = itemView.findViewById<TextView>(R.id.salary)
-    var moneyA = itemView.findViewById<TextView>(R.id.moneyA)
-    var date = itemView.findViewById<TextView>(R.id.date)
+    var amount = itemView.findViewById<TextView>(R.id.amount)
+    var tvdate = itemView.findViewById<TextView>(R.id.tvdate)
 }

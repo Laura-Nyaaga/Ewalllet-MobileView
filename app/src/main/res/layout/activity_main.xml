@@ -7,18 +7,147 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/moneyin"
+        android:layout_width="54dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/income" />
+    <TextView
+        android:id="@+id/money1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/teachers"
+        android:textSize="20dp"
+        android:text="@string/money_in"
+        app:layout_constraintStart_toEndOf="@+id/moneyin"
+        app:layout_constraintTop_toTopOf="@+id/moneyin" />
+    <TextView
+        android:id="@+id/amount1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/teachers"
+        android:textSize="20dp"
+        android:text="@string/kes_42400"
+        app:layout_constraintBottom_toBottomOf="@+id/moneyin"
+        app:layout_constraintStart_toEndOf="@+id/moneyin"
+        app:layout_constraintTop_toBottomOf="@+id/money1" />
+    <ImageView
+        android:id="@+id/moneyout"
+        android:layout_width="54dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/moneyin"
+        app:layout_constraintStart_toEndOf="@+id/money1"
+        app:layout_constraintTop_toTopOf="@+id/moneyin"
+        app:srcCompat="@drawable/expense" />
+    <TextView
+        android:id="@+id/money2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/teachers"
+        android:text="@string/money_out"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/moneyout"
+        app:layout_constraintTop_toTopOf="@+id/moneyout" />
+    <TextView
+        android:id="@+id/amount2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/teachers"
+        android:textSize="20dp"
+        android:text="@string/kes_23700"
+        app:layout_constraintBottom_toBottomOf="@+id/moneyout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/moneyout"
+        app:layout_constraintTop_toBottomOf="@+id/money2" />
+    <ImageView
+        android:id="@+id/balance"
+        android:layout_width="54dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyin"
+        app:srcCompat="@drawable/balance" />
+    <TextView
+        android:id="@+id/balance1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/teachers"
+        android:textSize="20dp"
+        android:text="@string/balance"
+        app:layout_constraintStart_toEndOf="@+id/balance"
+        app:layout_constraintTop_toBottomOf="@+id/amount1" />
+    <TextView
+        android:id="@+id/amount3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/teachers"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balance"
+        app:layout_constraintStart_toEndOf="@+id/balance"
+        android:text="@string/kes_18700" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="54dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balance"
+        app:layout_constraintStart_toEndOf="@+id/balance1"
+        app:layout_constraintTop_toTopOf="@+id/balance"
+        app:srcCompat="@drawable/transactions" />
+    <TextView
+        android:id="@+id/transactions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/teachers"
+        android:text="@string/transactions"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/balance1" />
+    <TextView
+        android:id="@+id/eight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/teachers"
+        android:textSize="20dp"
+        android:text="@string/_8"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDisplay"
         android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="2dp"
+        android:layout_height="505dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/cardview"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/balance" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
